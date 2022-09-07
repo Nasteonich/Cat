@@ -27,14 +27,6 @@ public class Main {
         System.out.println(Masha.getWeightCat());
         System.out.println(Masha.getNumberCat("Lex"));
 
-        HouseCat Jack = new HouseCat();
-        Jack.setNickname("Jack");
-        Jack.setAge(11);
-        Jack.setWeight(15);
-        Jack.setSex("m");
-        Jack.setHeight(110);
-        System.out.println(Jack.DegreeOfObesity());
-
 
     }
     /*
