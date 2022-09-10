@@ -1,3 +1,7 @@
+package entitys;
+
+import entitys.HouseCat;
+
 public class Human {
 
     public HouseCat[] cats;

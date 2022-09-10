@@ -1,38 +1,23 @@
-public class HouseCat {
-    private String sex;
-    private double weight;
-    private int age;
-    private double height;
-    private String nickname;
+package entitys;
 
-    public void Mew(){
-        System.out.println("Mew");
-    }
-
-    public String ChekAge(){
-        if (age > 10){
-            return "Alt";
-        } else {
-            return "Jung";
-        }
-    }
-
-    public int DegreeOfObesity(){
-        if(weight > 10 && weight < 20){
-           return  1;
-        } else if (weight > 20 && weight < 30) {
-            return 2;
-        } else if (weight > 30 && weight < 40) {
-            return 3;
-        } else if (weight > 40 && weight < 50) {
-            return 4;
-        } else{
-            return  5;
-        }
-    }
+public class HouseAnimal {
+    protected String sex;
+    protected double weight;
+    public int age;
+    protected double height;
+    protected String nickname;
 
     public String getSex() {
         return sex;
+    }
+
+    public HouseAnimal(double weight, int age, double height) {
+        this.weight = weight;
+        this.age = age;
+        this.height = height;
+    }
+
+    public HouseAnimal() {
     }
 
     public void setSex(String sex) {
@@ -99,6 +84,6 @@ public class HouseCat {
     }
     @Override
     public String toString(){
-        return "name: " + nickname + "; " + "Age: " + age + "; " + "sex: " + sex + "; " + "weight: " + weight + "; " + "height: " + height;
+        return getClass() + " name: " + nickname + "; " + "Age: " + age + "; " + "sex: " + sex + "; " + "weight: " + weight + "; " + "height: " + height;
     }
 }
