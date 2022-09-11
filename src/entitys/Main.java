@@ -30,23 +30,14 @@ public class Main {
         Masha.cats[2].setSex("m");
         Masha.cats[2].setHeight(108);
 
-        System.out.println(Masha.getAltCat());
-        System.out.println(Masha.getWeightCat());
-        System.out.println(Masha.getNumberCat("Lex"));
+//        System.out.println(Masha.getAltCat());
+//        System.out.println(Masha.getWeightCat());
+//        System.out.println(Masha.getNumberCat("Lex"));
 
         HouseAnimal animals[] = new HouseAnimal[3];
         animals[0] = new Dog(10, 10, 20);
         animals[1] = new HouseCat(20, 20, 30);
         animals[2] = new Dog(10, 20, 50);
-
-        HouseAnimal h = getMaxHeigth(animals);
-        if (h instanceof HouseCat){
-            h = (HouseCat) h;
-        }
-        else {
-            ((Dog) h).gav();
-        }
-        System.out.println(h);
 
 
         Disease allergy = new Disease(2);
@@ -63,29 +54,38 @@ public class Main {
         allergy.medicat_arr[1].setPrice(1496);
 
 
-        Doctor Hatson = new Doctor(1);
+        Disease zapor = new Disease(1);
+        zapor.setDescription("Zapor");
+        zapor.setHospital(false);
+        zapor.setDuration_of_treatment(0);
+        zapor.medicat_arr[0] = new Medication();
+        zapor.medicat_arr[0].setName("Antizaporin");
+        zapor.medicat_arr[0].setDesript(zapor);
+        zapor.medicat_arr[0].setPrice(220);
+
+
+        Doctor Hatson = new Doctor(3);
         Hatson.patzients[0].setId(1);
+        Hatson.patzients[0].setNickname("Lutik");
         Hatson.patzients[0].setDiagnosis(allergy);
+        Hatson.patzients[1].setId(2);
+        Hatson.patzients[1].setNickname("Snejinka");
+        Hatson.patzients[1].setDiagnosis(allergy);
+        Hatson.patzients[2].setId(3);
+        Hatson.patzients[2].setNickname("Jopik");
+        Hatson.patzients[2].setDiagnosis(zapor);
 
-        Client Luba = new Client();
-        Luba.setId(1);
-        Luba.setName("Luba");
-        Luba.setSurname("Lejneva");
-        Luba.setAge(45);
-        Luba.setNameTier("Nemo");
 
+        Patient[] p = Hatson.get_patients_with_Disease(allergy);
+        for (int i = 0; i < p.length; i++){
 
-    }
-    public static HouseAnimal getMaxHeigth(HouseAnimal[] animals){
-        HouseAnimal t = new HouseAnimal();
-        double max_h = 0;
-        for (int i = 0; i < animals.length; i++){
-            if (animals[i].getHeight() > max_h) {
-                max_h = animals[i].getHeight();
-                t = animals[i];
-            }
+            System.out.println(p[i].toString());
         }
-        return t;
+
+        String pp = Hatson.get_patient(1);
+        System.out.println(pp);
+
+
     }
 
 }

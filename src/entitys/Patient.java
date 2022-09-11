@@ -27,7 +27,7 @@ public class Patient extends HouseAnimal {
     @Override
     public String toString(){
 
-        return  getClass() + "id: " + id + "Nickname: " + getNickname() + "Diagnos: " + diagnosis;
+        return  getClass() + " " + "id: " + id + " " + "Nickname: " + getNickname();
 
     }
 
