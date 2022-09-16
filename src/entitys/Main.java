@@ -1,12 +1,5 @@
 package entitys;
 
-import entitys.Dog;
-import entitys.HouseAnimal;
-import entitys.HouseCat;
-import entitys.Human;
-
-import javax.net.ssl.HostnameVerifier;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -30,9 +23,6 @@ public class Main {
         Masha.cats[2].setSex("m");
         Masha.cats[2].setHeight(108);
 
-//        System.out.println(Masha.getAltCat());
-//        System.out.println(Masha.getWeightCat());
-//        System.out.println(Masha.getNumberCat("Lex"));
 
         HouseAnimal animals[] = new HouseAnimal[3];
         animals[0] = new Dog(10, 10, 20);
@@ -79,13 +69,15 @@ public class Main {
         Patient[] p = Hatson.get_patients_with_Disease(allergy);
         for (int i = 0; i < p.length; i++){
 
-            System.out.println(p[i].toString());
+            System.out.println(p[i]);
         }
 
-        String pp = Hatson.get_patient(1);
-        System.out.println(pp);
-
-
+        Patient paz = Hatson.get_patient(5);
+        if (paz != null)
+            System.out.println( paz );
+        else {
+            System.out.println("NOT FOUND!");
+        }
     }
 
 }

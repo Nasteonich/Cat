@@ -11,9 +11,7 @@ public class Doctor extends Person {
             patzients[i] = new Patient();
         }
     }
-    public Doctor(){
-
-    }
+    public Doctor(){ }
 
     public double getSalary() {
         return salary;
@@ -28,26 +26,18 @@ public class Doctor extends Person {
         return patzients;
     }
 
-    public String get_patient(int id){
+    public Patient get_patient(int id){
 
-        String patientt = " ";
+        for (int i = 0; i < patzients.length; i++) {
 
-        for (int i = 0; i < patzients.length; i++){
+            if (patzients[i].getId() == id) {
 
-            if (patzients[i].getId() == id){
-
-                patientt = patzients[i].getNickname();
-                return patientt;
-
-            } else {
-
-                patientt = "No this Patient!";
+                return patzients[i];
 
             }
 
         }
-
-        return patientt;
+        return null;
 
     }
 
