@@ -35,6 +35,7 @@ public class Main {
         allergy.setHospital(true);
         allergy.setDuration_of_treatment(2);
         allergy.medicat_arr[0] = new Medication();
+        allergy.setDuration_of_treatment(2);
         allergy.medicat_arr[0].setName("Dironet");
         allergy.medicat_arr[0].setDesript(allergy);
         allergy.medicat_arr[0].setPrice(1500);
@@ -64,6 +65,31 @@ public class Main {
         Hatson.patzients[2].setId(3);
         Hatson.patzients[2].setNickname("Jopik");
         Hatson.patzients[2].setDiagnosis(zapor);
+
+
+        Admin Dmitri = new Admin(3);
+        Dmitri.clients[0].setId(1);
+        Dmitri.clients[0].setName("Jana");
+        Dmitri.clients[0].setSurname("Grou");
+        Dmitri.clients[0].setNameTier("Cherchel");
+
+        Dmitri.clients[1].setId(2);
+        Dmitri.clients[1].setName("Lena");
+        Dmitri.clients[1].setSurname("Maur");
+        Dmitri.clients[1].setNameTier("Kitik");
+
+        Dmitri.clients[2].setId(3);
+        Dmitri.clients[2].setName("Gena");
+        Dmitri.clients[2].setSurname("Qwer");
+        Dmitri.clients[2].setNameTier("Goga");
+
+        Client client_by_id = Dmitri.get_Client(2);
+        Client client_by_pet = Dmitri.get_Client_byPet("Goga");
+        System.out.println(client_by_id);
+        System.out.println(client_by_pet);
+
+        double cost = Dmitri.cost_calculation(allergy);
+        System.out.println(cost);
 
 
         Patient[] p = Hatson.get_patients_with_Disease(allergy);

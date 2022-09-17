@@ -19,6 +19,7 @@ public class Disease {
 
     }
 
+
     public String getDescription() {
         return description;
     }

@@ -15,9 +15,9 @@ public class Client extends Person {
     @Override
     public String toString(){
 
-        return  getClass() + "id: " + getId() + "name: " + getName() + "Surname: " +
-                getSurname() + "Age: " + getAge() + "Address: " + getAdress() +
-                "email: " + getEmail() + "number: " + getNumber() + "HauseTier: " + NameTier;
+        return  getClass() + " id: <" + getId() + "> name: <" + getName() + "> Surname: <" +
+                getSurname() + "> Age: <" + getAge() + "> Address: <" + getAdress() +
+                "> email: <" + getEmail() + "> number: <" + getNumber() + "> HauseTier: <" + NameTier + ">";
 
     }
 }
