@@ -1,4 +1,4 @@
-package entitys;
+package Animals;
 
 public class Dog extends HouseAnimal {
 

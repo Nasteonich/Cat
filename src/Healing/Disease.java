@@ -1,4 +1,4 @@
-package entitys;
+package Healing;
 
 public class Disease {
 

@@ -1,4 +1,7 @@
-package entitys;
+package Hospital;
+
+import Animals.HouseAnimal;
+import Healing.Disease;
 
 public class Patient extends HouseAnimal {
 

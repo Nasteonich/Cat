@@ -1,4 +1,7 @@
-package entitys;
+package Hospital;
+
+import Healing.Disease;
+import People.Person;
 
 public class Doctor extends Person {
 
@@ -75,9 +78,9 @@ public class Doctor extends Person {
     @Override
     public String toString(){
 
-        return  getClass() + "id: " + getId() + "name: " + getName() + "Surname: " +
-                getSurname() + "Age: " + getAge() + "Address: " + getAdress() +
-                "email: " + getEmail() + "number: " + getNumber() + "salary: " + salary;
+        return  getClass() + " id: <" + getId() + "> name: <" + getName() + "> Surname: <" +
+                getSurname() + "> Age: <" + getAge() + "> Address: <" + getAdress() +
+                "> email: <" + getEmail() + "> number: <" + getNumber() + "> salary: <" + salary + ">";
 
     }
 }

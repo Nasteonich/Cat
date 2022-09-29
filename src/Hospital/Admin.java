@@ -1,4 +1,8 @@
-package entitys;
+package Hospital;
+
+import Healing.Disease;
+import Healing.Medication;
+import People.Person;
 
 public class Admin extends Person {
 
@@ -70,6 +74,13 @@ public class Admin extends Person {
 
     public void setClients(Client[] clients) {
         this.clients = clients;
+    }
+
+    @Override
+    public String toString(){
+
+        return getClass() + " id: <" + getId() + "> name: <" + getName() + "> Surname: <" +
+                getSurname() + "> Age: <" + getAge() + "> Number: <" + getNumber() + ">";
     }
 
 }

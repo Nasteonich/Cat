@@ -1,4 +1,6 @@
-package entitys;
+package Hospital;
+
+import People.Person;
 
 public class Client extends Person {
 

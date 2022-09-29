@@ -1,6 +1,6 @@
-package entitys;
+package People;
 
-import entitys.HouseCat;
+import Animals.HouseCat;
 
 public class Human {
 
